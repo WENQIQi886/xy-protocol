@@ -151,6 +151,17 @@ class CausalChain:
 class DigitalLifeForm:
     """具备独立记忆、唯一身份、时序行为记录的数字生命体"""
 
+    # 事件类型 -> 性格微调权重（闭环反馈）
+    PERSONALITY_DELTA = {
+        "trespass":  {"suspicion": +0.05, "coldness": +0.02},
+        "threat":    {"suspicion": +0.08, "coldness": +0.05, "kindness": -0.05},
+        "observe":   {"suspicion": +0.02},
+        "friendly":  {"kindness": +0.05, "suspicion": -0.05, "coldness": -0.03},
+        "gift":      {"kindness": +0.05, "suspicion": -0.05},
+        "reconcile": {"kindness": +0.05, "suspicion": -0.05, "coldness": -0.05},
+        "broadcast": {},
+    }
+
     def __init__(self, identity, name, personality, memories):
         self.identity = identity
         self.name = name
@@ -169,5 +180,37 @@ class DigitalLifeForm:
             action = event.params.get("suspicious_action", "戒备观察")
         return hits, action
 
+    def adjust_personality(self, event):
+        """闭环反馈：事件类型 -> 性格微调，返回变化字典"""
+        delta = self.PERSONALITY_DELTA.get(event.event_type, {})
+        changes = {}
+        for trait, d in delta.items():
+            old = self.personality.get(trait, 0.0)
+            new = max(0.0, min(1.0, old + d))
+            if abs(new - old) > 1e-9:
+                changes[trait] = (old, new)
+                self.personality[trait] = new
+        return changes
+
     def __str__(self):
         return f"{self.name} <{self.identity}>"
+
+
+# ============================================================
+# 群体因果链
+# ============================================================
+
+class GroupChain:
+    """群体因果链：统一群体记忆查询接口，信息不对称产生涌现"""
+
+    def __init__(self, group_id):
+        self.group_id = group_id
+        self.chain = CausalChain(group_id)
+
+    def broadcast(self, event):
+        """异步广播：事件追加至群体链"""
+        return self.chain.append(event)
+
+    def snapshot(self):
+        """当前群体链快照（不同成员在不同时刻看到不同快照）"""
+        return [e.event_type for e in self.chain.events]

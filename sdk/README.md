@@ -34,7 +34,14 @@ assert npc.chain.verify() is True
 | `Identity` | 身份标识解析与生成（xy://{puf}@{world}） |
 | `Event` | 事件记录（哈希指针链式连接） |
 | `CausalChain` | 因果链（append-only + 哈希链校验） |
-| `DigitalLifeForm` | 数字生命体（性格 + 记忆 + 因果链） |
+| `DigitalLifeForm` | 数字生命体（性格 + 记忆 + 因果链 + 性格微调） |
+| `GroupChain` | 群体因果链（异步广播 + 快照查询） |
+
+## 测试
+
+```bash
+python3 -m unittest discover -s tests -v
+```
 
 ## 依赖
 
