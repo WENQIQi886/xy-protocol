@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# 环境
+.venv/
+venv/
+env/
+
+# 验证数据包（含专利验证数据，按需单独分发）
+data/*.csv
+data/*.json
+data/*.npz
+data/*.npy
+
+# IDE
+.vscode/
+.idea/
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
