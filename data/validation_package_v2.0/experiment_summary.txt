@@ -1,0 +1,24 @@
+========================================================================
+  奇玥验证引擎 V1.0 — 120组实验摘要
+========================================================================
+生成时间: 2026-07-12T16:32:57.143600
+平台: Windows-10-10.0.26200-SP0
+Python: 3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]
+[orthogonal_18cases]
+  基础正交: 3-20m, 5因子, 18组, 94%通过
+[far_field_96cases]
+  远距极限: 50-100m, 6因子, 96组(全组合), 91.7%通过
+[user_env_18cases]
+  三维生态: 6行为×4环境×3补强, 18组, 67%→100%(修正后)
+[angle_only_6cases]
+  纯角度验证: 3-20m, 6组, 100% S级
+------------------------------------------------------------------------
+文件哈希清单:
+  0b33b968819df341...  output/orthogonal_18cases_results.json
+  9949733e1db24ec8...  output/far_field_48cases_results.json
+  e6a12f2610a33cb9...  output/user_env_18cases_results.json
+  b347c7d51e79b805...  output/angle_only_6cases_results.json
+  15b731984f1aeb8c...  src/orthogonal_validation.py
+  29e0d97c7cf1fb21...  src/far_field_48cases.py
+  199eae6716d4354e...  src/user_env_18cases.py
+  0111044ef1ba8ee8...  src/angle_only_6cases.py

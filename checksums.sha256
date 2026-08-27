@@ -1,18 +1,12 @@
-# 产物哈希链（Checksums）
-
-本文件记录种子 `0x612` 驱动实验产物的 SHA-256 哈希链，用于证据锁定与第三方存证。
-
-生成方式（数据上传后执行）：
-
-```bash
-# 对 data/ 下实验产物生成校验清单
-sha256sum data/* > checksums.sha256
-```
-
-校验方式：
-
-```bash
-sha256sum -c checksums.sha256
-```
-
-> 占位：数据包上传后填充真实哈希值，并在开源前通过联合信任 TSA 完成时间戳固化存证。
+3956376eea7b59f2bdb5f2eb3934696404806c528a401c491566b5e98a936407  data/validation_package_v2.0/README.txt
+ffbc8e690b35df9b173074aa4df9761350c97aee17a5f2ef72240c0882759fb2  data/validation_package_v2.0/experiment_summary.txt
+5a5855d3b60830a19b048bc52e0d0150cb0e7f263f982f60c1011fd33833ad12  data/validation_package_v2.0/manifest.json
+6f075bb2540ddcc4eff7c63aee399c2eccecee870474b6cb262a3167ba22ff3c  data/validation_package_v2.0/output/angle_only_6cases_results.json
+af11b4a37eefbad11f42d148ee04e16df322e4952944db56bb3d970eaf6dfb9d  data/validation_package_v2.0/output/far_field_48cases_results.json
+034eca4b1d7acfa64cf34d329af1d3cb5bb0be8b72c2cf71fc4dd06b90d0212a  data/validation_package_v2.0/output/orthogonal_18cases_results.json
+83fc65150148ee015e61c4ae8a0f020af257898bbedf491e5b1b7abc55161b01  data/validation_package_v2.0/output/user_env_18cases_results.json
+0ca4cae75f94c535d28f0d540d4b05ab392e9cf8fbf8830eefe7be685152d35e  data/validation_package_v2.0/run_all.py
+3d344798d9af1176b2865614a1ba06908e585f529eba3a03fbf33aa4faf39dc4  data/validation_package_v2.0/src/angle_only_6cases.py
+49155e1658f0465d6f0e95d06567e48a957cfcc46c4f872aafb237d216f65af0  data/validation_package_v2.0/src/far_field_48cases.py
+b2de7252051df6c1742607864f975e19f0f22f55fc48a76e15e9dff8d9589a69  data/validation_package_v2.0/src/orthogonal_validation.py
+7672ac09ba2a2912ec8315fde0f9eac2e77f2637aa19ab79a36e46fffe84b494  data/validation_package_v2.0/src/user_env_18cases.py

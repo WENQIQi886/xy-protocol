@@ -1,0 +1,73 @@
+{
+  "package": "奇玥验证引擎 V1.0 — 取证级仿真测试套件",
+  "generated_at": "2026-07-12T16:32:57.143600",
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel"
+  },
+  "random_seeds": {
+    "global": "0x612",
+    "camera": "0x612",
+    "noise": "0x613",
+    "note": "所有随机因子使用 numpy.random.RandomState(0x612)，确保完全确定性复现"
+  },
+  "experiment_summary": {
+    "total_experiments": 3,
+    "orthogonal_18cases": "基础正交: 3-20m, 5因子, 18组, 94%通过",
+    "far_field_96cases": "远距极限: 50-100m, 6因子, 96组(全组合), 91.7%通过",
+    "user_env_18cases": "三维生态: 6行为×4环境×3补强, 18组, 67%→100%(修正后)",
+    "angle_only_6cases": "纯角度验证: 3-20m, 6组, 100% S级"
+  },
+  "files": [
+    {
+      "relative_path": "output/orthogonal_18cases_results.json",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/output/orthogonal_18cases_results.json",
+      "sha256": "0b33b968819df341bd947507b1f234cae2c9476240044b578674f9a4789c4de9",
+      "size": "8,994 bytes"
+    },
+    {
+      "relative_path": "output/far_field_48cases_results.json",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/output/far_field_48cases_results.json",
+      "sha256": "9949733e1db24ec8a134030845f0b1e3574923b556f0fdeba3409755c3a2414f",
+      "size": "49,581 bytes"
+    },
+    {
+      "relative_path": "output/user_env_18cases_results.json",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/output/user_env_18cases_results.json",
+      "sha256": "e6a12f2610a33cb91ba2ea4e41be8e59e45e89f5dcd48b0d09add90cd5890615",
+      "size": "8,744 bytes"
+    },
+    {
+      "relative_path": "output/angle_only_6cases_results.json",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/output/angle_only_6cases_results.json",
+      "sha256": "b347c7d51e79b805096a501e58bc86fdb8236216b09b63c0f0abf267cdfa47eb",
+      "size": "2,190 bytes"
+    },
+    {
+      "relative_path": "src/orthogonal_validation.py",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/temp/orthogonal_validation.py",
+      "sha256": "15b731984f1aeb8cf66b75032643dd082a655781ab91a5f020b0e91afec1240a",
+      "size": "8,773 bytes"
+    },
+    {
+      "relative_path": "src/far_field_48cases.py",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/temp/far_field_48cases.py",
+      "sha256": "29e0d97c7cf1fb21822c04715f5e7261e970f235b10ddaa8f22eba7353db8282",
+      "size": "8,213 bytes"
+    },
+    {
+      "relative_path": "src/user_env_18cases.py",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/temp/user_env_18cases.py",
+      "sha256": "199eae6716d4354ecdc7cc84dd2cbd6e2312a0083cfe1f6497588637a48876be",
+      "size": "8,238 bytes"
+    },
+    {
+      "relative_path": "src/angle_only_6cases.py",
+      "absolute_path": "C:/Users/zhong/AppData/Roaming/Tencent/Marvis/User/oAN1i2afY0iez2OXrf8pvWGOxpI0/workspace/conv_19ec3f14866_5a3840815c6e/temp/angle_only_6cases.py",
+      "sha256": "0111044ef1ba8ee8e0df09e3ae56b9bc925d2e44e071f98e6da1ad96ec3b175c",
+      "size": "3,590 bytes"
+    }
+  ]
+}

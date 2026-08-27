@@ -1,0 +1,22 @@
+# 构建上下文排除（防止验证数据与敏感文件进入镜像/CI）
+.git
+.github
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.log
+.dockerignore
+Dockerfile
+docker-compose.yml
+Makefile
+README.md
+docs/同行项目分析与QC改善方案.md
+docs/六西格玛黑带项目实施计划.md
+
+# 验证数据按需挂载，不入镜像
+data/*.csv
+data/*.json
+data/*.npz
+data/*.npy
