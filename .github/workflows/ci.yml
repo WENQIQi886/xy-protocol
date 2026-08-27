@@ -15,7 +15,7 @@ on:
 
 env:
   SEED: '0x612'
-  PYTHON_VERSION: '3.10.13'
+  PYTHON_VERSION: '3.14.6'
 
 jobs:
   verify-data:
