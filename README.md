@@ -2,9 +2,9 @@
 
 > 一种基于多摄像头同步拍摄的参数化成像方法（配套发明专利）。开源层含验证数据、复现环境与实验报告；核心算法由专利保护，保持闭源。
 
-![CI](https://img.shields.io/github/actions/workflow/status/your-repo/param-imaging/ci.yml?branch=main&label=CI)
-![CodeQL](https://img.shields.io/github/actions/workflow/status/your-repo/param-imaging/codeql.yml?label=CodeQL)
-![Release](https://img.shields.io/github/v/release/your-repo/param-imaging)
+![CI](https://img.shields.io/github/actions/workflow/status/WENQIQi886/xy-protocol/ci.yml?branch=main&label=CI)
+![CodeQL](https://img.shields.io/github/actions/workflow/status/WENQIQi886/xy-protocol/codeql.yml?label=CodeQL)
+![Release](https://img.shields.io/github/v/release/WENQIQi886/xy-protocol)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 ## 核心贡献（Key Contributions）
@@ -36,7 +36,7 @@ graph TD
 
 ```bash
 # 1. 克隆仓库
-git clone <repo-url> param-imaging && cd param-imaging
+git clone <repo-url> xy-protocol && cd xy-protocol
 
 # 2. 校验数据哈希（种子 0x612 驱动的实验产物）
 make verify

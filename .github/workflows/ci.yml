@@ -68,7 +68,7 @@ jobs:
         with:
           context: .
           push: false
-          tags: param-imaging:ci-${{ github.sha }}
+          tags: xy-protocol:ci-${{ github.sha }}
           build-args: |
             SEED=${{ env.SEED }}
           cache-from: type=gha

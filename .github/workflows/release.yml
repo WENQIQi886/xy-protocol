@@ -58,8 +58,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/param-imaging:latest
-            ghcr.io/${{ github.repository_owner }}/param-imaging:${{ steps.version.outputs.TAG }}
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ steps.version.outputs.TAG }}
           build-args: |
             SEED=0x612
           cache-from: type=gha

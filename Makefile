@@ -11,7 +11,7 @@
 SHELL       := /bin/bash
 .PHONY: all check verify build test clean
 
-IMAGE      ?= ghcr.io/$(shell echo $${GITHUB_REPOSITORY:-param-imaging/param-imaging} | tr '[:upper:]' '[:lower:]'):latest
+IMAGE      ?= ghcr.io/$(shell echo $${GITHUB_REPOSITORY:-xy-protocol/xy-protocol} | tr '[:upper:]' '[:lower:]'):latest
 SEED       ?= 0x612
 
 all: check
