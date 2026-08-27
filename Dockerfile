@@ -28,18 +28,15 @@ ARG SEED=0x612
 ENV SEED=${SEED}
 
 # 从依赖层复制已安装包，避免重复安装
-COPY --from=deps /usr/local/lib/python3.10/site-packages /usr/local/lib/python3.10/site-packages
+COPY --from=deps /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
 COPY --from=deps /usr/local/bin /usr/local/bin
 
 # 复制实验代码（不含数据包，数据按需挂载，避免镜像膨胀）
-COPY run_all.py /app/run_all.py 2>/dev/null || true
-COPY configs/ /app/configs/ 2>/dev/null || true
-COPY docs/ /app/docs/ 2>/dev/null || true
-COPY data/ /app/data/ 2>/dev/null || true
+COPY --from=deps /app /app
 
 # 非 root 运行（纵深防御）
 RUN useradd --create-home --shell /bin/bash imager && \
     chown -R imager:imager /app
 USER imager
 
-CMD ["python", "run_all.py"]
+CMD ["python", "data/validation_package_v2.0/run_all.py"]
