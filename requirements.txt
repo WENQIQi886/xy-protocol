@@ -2,4 +2,4 @@
 # 版本与 Dockerfile 环境锁保持一致，禁止手动升级，需经 dependabot 审批
 numpy==1.26.2
 scipy==1.11.4
-opencv-python-headless==4.9.0.80
+opencv-python-headless==5.0.0.93
