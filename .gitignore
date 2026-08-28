@@ -28,3 +28,7 @@ Thumbs.db
 
 # 日志
 *.log
+
+# 生成产物（不进入版本控制）
+index.html
+data/validation_package_v2.0/aggregation_report.md
